@@ -1,0 +1,67 @@
+<form id="sundae-order-form">
+  <h2>Online Sundae Order Form</h2>
+  <fieldset>
+    <legend>Customer Info</legend>
+    <p>
+      <label>Name: <input type="name" autocomplete="name" /></label>
+    </p>
+    <p>
+      <label>Telephone: <input type="tel" autocomplete="tel" /></label>
+    </p>
+    <p>
+      <label>Email address: <input type="email" autocomplete="email" /></label>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Size</legend>
+    <p>
+      <label><input type="radio" name="size" value="small" />Small</label>
+    </p>
+    <p>
+      <label><input type="radio" name="size" value="medium" />Medium</label>
+    </p>
+    <p>
+      <label><input type="radio" name="size" value="large" />Large</label>
+    </p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Toppings</legend>
+    <p>
+      <label
+        ><input type="checkbox" name="topping" value="whipped-cream" />Whipped
+        cream</label
+      >
+    </p>
+    <p>
+      <label
+        ><input type="checkbox" name="topping" value="cherry" />Cherry</label
+      >
+    </p>
+    <p>
+      <label><input type="checkbox" name="topping" value="nuts" />Nuts</label>
+    </p>
+    <p>
+      <label
+        ><input type="checkbox" name="topping" value="caramel-sauce" />Caramel
+        sauce</label
+      >
+    </p>
+    <p>
+      <label
+        ><input
+          type="checkbox"
+          name="topping"
+          value="chocolate-sauce"
+        />Chocolate sauce</label
+      >
+    </p>
+  </fieldset>
+  <p>
+    <label>Delivery instructions: </label><br /><textarea
+      name="comments"
+    ></textarea>
+  </p>
+  <p><button>Submit order</button></p>
+</form>

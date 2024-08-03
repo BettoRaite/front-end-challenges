@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Spacing Variables */
+  --title-margin-bottom: 2rem;
+  --input-padding: 1.3rem;
+  --input-padding-vertical: 0.8rem;
+  --border-radius: 0.5rem;
+  --transition-duration: 0.3s;
+
+  /* Colors */
+  --bg-color: hsl(148, 38%, 91%);
+  --text-color: hsl(187, 24%, 22%);
+  --border-color: hsl(186, 15%, 59%);
+  --border-color-hover: hsl(169, 82%, 27%);
+  --border-color-error: hsl(0, 66%, 54%);
+  --button-bg: hsl(169, 82%, 27%);
+  --button-bg-hover: hsl(169, 82%, 15%);
+  --button-bg-active: hsl(169, 81%, 29%);
+  --error-color: hsl(0, 66%, 54%);
+  --toast-bg: hsl(187, 24%, 22%);
+  --toast-text-color: white;
+  --toast-content-color: hsl(148, 38%, 91%);
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+* {
+  font-family: "Karla", sans-serif;
+}
+
+.error-message {
+  color: var(--error-color);
+  margin-top: 0.625rem;
+}
+
+/* Input Styles */
+.input,
+.option-wrapper {
+  padding: var(--input-padding);
+  padding-top: var(--input-padding-vertical);
+  padding-bottom: var(--input-padding-vertical);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+}
+
+.message-input {
+  height: 5rem;
+  resize: none;
+}
+
+@media screen and (max-width: 640px) {
+  .message-input {
+    height: 13rem;
+  }
+}
+
+.input:not(.input--error):is(:hover, :focus) {
+  border-color: var(--border-color-hover);
+}
+
+.input--error {
+  border-color: var(--border-color-error);
+}
+
+.input--check[type="checkbox"] {
+  appearance: none;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+}
+
+.selected-option {
+  background-color: var(--bg-color);
+  border-color: var(--border-color-hover);
+}
+
+.selected-option > .input--check[type="checkbox"] {
+  border-color: var(--border-color-hover);
+}
+
+.selected-option > .input--check[type="checkbox"]::before {
+  --size: 8px;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  margin: auto;
+  height: var(--size);
+  width: var(--size);
+  background-color: var(--border-color-hover);
+}
+
+/* Labels */
+.label,
+.label--required {
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  margin-bottom: 0.65rem;
+}
+
+.label--required::after {
+  content: "*";
+  margin-left: 0.5rem;
+  color: var(--border-color-hover);
+}
+
+/* Consent Layout */
+.consent-layout {
+  margin-top: 2.3rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.consent-layout * {
+  margin: 0;
+  text-transform: none;
+}
+
+/* Button */
+.button-submit {
+  margin-top: 2.3rem;
+  padding: var(--input-padding);
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: var(--button-bg);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.button-submit:hover {
+  background-color: var(--button-bg-hover);
+}
+
+.button-submit:active {
+  background-color: var(--button-bg-active);
+}
+
+/* Toast Notification */
+.toast-notification-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  top: 4%;
+  transition: opacity var(--transition-duration), top var(--transition-duration);
+}
+
+.toast-notification-wrapper--hidden {
+  opacity: 0;
+  top: -20%;
+}
+
+.toast-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background-color: var(--toast-bg);
+  color: var(--toast-text-color);
+  padding: 1.4rem;
+  border-radius: 10px;
+}
+
+.toast-notification * {
+  margin: 0;
+}
+
+.toast-notification__header-layout {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.toast-notification__header {
+  font-size: 1rem;
+}
+
+.toast-notification__icon {
+  --size: 1.2rem;
+  width: var(--size);
+  height: var(--size);
+}
+
+.toast-notification__content {
+  color: var(--toast-content-color);
+}
