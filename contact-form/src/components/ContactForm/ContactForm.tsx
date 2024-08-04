@@ -236,6 +236,7 @@ export function ContactForm() {
 
 				<div className="consent-layout">
 					<input
+						className="input-check"
 						value={formData.consent ? "" : "true"}
 						type="checkbox"
 						id="consent"

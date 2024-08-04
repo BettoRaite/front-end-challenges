@@ -36,7 +36,11 @@ export function SelectInput({
 			onClick={handleClick}
 			className={`option-wrapper ${isSelected ? "selected-option" : ""}`}
 		>
-			<input className={"input--check"} type="checkbox" {...inputProps} />
+			<input
+				className={"input-check-rounded"}
+				type="checkbox"
+				{...inputProps}
+			/>
 			<label
 				htmlFor={inputProps?.id}
 				style={{
