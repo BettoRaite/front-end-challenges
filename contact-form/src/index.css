@@ -3,7 +3,7 @@
 :root {
   /* Spacing Variables */
   --title-margin-bottom: 2rem;
-  --input-padding: 1.3rem;
+  --input-padding: 1rem;
   --input-padding-vertical: 0.8rem;
   --border-radius: 0.5rem;
   --transition-duration: 0.3s;
@@ -210,8 +210,8 @@ body {
 }
 
 .toast-notification-wrapper--hidden {
-  opacity: 0;
-  top: -20%;
+  opacity: 1;
+  /* top: -20%; */
 }
 
 .toast-notification {
@@ -246,4 +246,11 @@ body {
 
 .toast-notification__content {
   color: var(--toast-content-color);
+}
+@media screen and (max-width: 640px) {
+  .toast-notification {
+    --margin-sides: 0.6rem;
+    margin-left: var(--margin-sides);
+    margin-right: var(--margin-sides);
+  }
 }

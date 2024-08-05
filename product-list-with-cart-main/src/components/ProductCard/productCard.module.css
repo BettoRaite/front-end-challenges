@@ -1,0 +1,19 @@
+.layout {
+  width: 100%;
+  display: grid;
+  position: relative;
+}
+.cover {
+  width: 100%;
+  border-radius: 8px;
+}
+.buttonWrapper {
+  width: 100%;
+  position: absolute;
+  top: 57%;
+  display: flex;
+  justify-content: center;
+}
+.addToCardButton {
+  padding: 10px;
+}
