@@ -110,7 +110,7 @@ Things that I suck at.
 - Accessability
 Not sure how websites should be built to be the most accessible.
 - Planning
-At the beginning I spent lots of time rewritting css here and there. Instead what I could do is to spend some more time on analyzing the website design and finding all those repeating patters.
+At the beginning I spent lots of time rewritting css here and there. Instead	 what I could do is to spend some more time on analyzing the website design and finding all those repeating patters.
 - Naming (I better say nothing...)
 
 

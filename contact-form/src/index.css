@@ -210,8 +210,8 @@ body {
 }
 
 .toast-notification-wrapper--hidden {
-  opacity: 1;
-  /* top: -20%; */
+  opacity: 0;
+  top: -20%;
 }
 
 .toast-notification {
