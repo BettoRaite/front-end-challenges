@@ -17,3 +17,28 @@
 .addToCardButton {
   padding: 10px;
 }
+.orderButtonsLayout {
+  width: 40%;
+  background-color: var(--red);
+  color: var(--rose-100);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 1rem;
+  padding: 0.8rem;
+}
+.orderButtonsLayout > button {
+  --size: 1rem;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--rose-100);
+  background-color: transparent;
+  border: 2px solid var(--rose-100);
+}

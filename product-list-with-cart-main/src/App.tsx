@@ -9,10 +9,10 @@ const initialProducts: Product[] = [];
 for (const productData of productsData) {
 	initialProducts.push({
 		id: uuidv4(),
-		productName: productData.name,
-		productCategory: productData.category,
+		name: productData.name,
+		category: productData.category,
 		price: productData.price,
-		toOrder: 0,
+		orderCount: 0,
 		image: { ...productData.image },
 	});
 }

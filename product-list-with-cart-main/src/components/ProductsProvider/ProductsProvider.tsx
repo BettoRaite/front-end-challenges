@@ -10,12 +10,46 @@ const ProductsDispatchContext = createContext<Dispatch<ProductAction> | null>(
 	null,
 );
 
+export function useProductsHandler() {
+	const dispatch = useProductsDispatch();
+
+	return {
+		addToCart(id: string) {
+			dispatch({
+				type: "add_to_cart",
+				id,
+			});
+		},
+		removeFromCart(id: string) {
+			dispatch({
+				type: "remove_from_cart",
+				id,
+			});
+		},
+		cancelOrder(id: string) {
+			dispatch({
+				type: "cancel_order",
+				id,
+			});
+		},
+		startNewOrder() {
+			dispatch({
+				type: "start_new_order",
+			});
+		},
+	};
+}
+
 export function useProducts() {
 	return useContext(ProductsContext) ?? [];
 }
 
+const dispatchFallback = () => {
+	console.error("No products dispatch.");
+};
+
 export function useProductsDispatch() {
-	return useContext(ProductsDispatchContext);
+	return useContext(ProductsDispatchContext) ?? dispatchFallback;
 }
 
 export function ProductsProvider({
@@ -23,7 +57,6 @@ export function ProductsProvider({
 	initialProducts,
 }: { children: React.ReactNode[]; initialProducts: Product[] }) {
 	const [products, dispatch] = useReducer(productsReducer, initialProducts);
-
 	return (
 		<ProductsContext.Provider value={products}>
 			<ProductsDispatchContext.Provider value={dispatch}>

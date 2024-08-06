@@ -1,0 +1,18 @@
+.layout {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: 0;
+  background-color: var(--rose-50);
+  transition: all 0.2s;
+}
+.layoutHidden {
+  top: 100%;
+}
+.button {
+  text-transform: capitalize;
+}
+
+@media (min-width: 640px) {
+}
