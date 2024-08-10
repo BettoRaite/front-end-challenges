@@ -37,3 +37,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+.attribution {
+  position: absolute;
+
+  font-size: 0.7rem;
+  text-align: center;
+
+  width: 100%;
+  opacity: 0.5;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
