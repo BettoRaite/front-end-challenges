@@ -20,12 +20,12 @@ We provide the data for the products in a local `data.json` file. So you can use
 
 Your users should be able to: 
 
-- Add items to the cart and remove them
-- Increase/decrease the number of items in the cart
-- See an order confirmation modal when they click "Confirm Order"
-- Reset their selections when they click "Start New Order"
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+[+] Add items to the cart and remove them
+[+] Increase/decrease the number of items in the cart
+[+] See an order confirmation modal when they click "Confirm Order"
+[+] Reset their selections when they click "Start New Order"
+[+] View the optimal layout for the interface depending on their device's screen size
+[+] See hover and focus states for all interactive elements on the page
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
