@@ -12,7 +12,7 @@ export type ProductCardProps = {
 
 export function ProductCard({ product }: ProductCardProps) {
 	const productsHandler = useProductsHandler();
-	
+
 	const isInCart = product.orderCount > 0;
 
 	function handleAddToCart() {
@@ -63,7 +63,7 @@ export function ProductCard({ product }: ProductCardProps) {
 	let imageUrl = "";
 	const productImage = product.image;
 
-	if (window.innerWidth >= 1280) {
+	if (window.innerWidth >= 1024) {
 		imageUrl = productImage.desktop;
 	} else if (window.innerWidth >= 640) {
 		imageUrl = productImage.tablet;
