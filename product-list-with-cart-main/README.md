@@ -86,8 +86,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Repo](https://github.com/BettoRaite/front-end-challenges/tree/master/product-list-with-cart-main)
+- Live Site URL: [Product list with cart](https://product-list-by-bettoraite.vercel.app/)
 
 ## My process
 
