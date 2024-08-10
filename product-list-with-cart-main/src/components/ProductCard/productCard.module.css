@@ -84,7 +84,7 @@
 }
 
 .addToCardButton {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .buttonDecrement {
@@ -124,16 +124,16 @@
   margin-top: 0.1rem;
 }
 .productCategory {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--rose-400);
 }
 .productName {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--rose-900);
   font-weight: 500;
 }
 .productPrice {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--red);
   font-weight: 500;
 }
@@ -143,7 +143,7 @@
 
 @media (min-width: 320px) {
   .buttonsLayout {
-    width: 45%;
+    width: 50%;
   }
 }
 
@@ -158,12 +158,12 @@
 
 @media (min-width: 1024px) {
   .buttonsLayout {
-    width: 70%;
+    width: 50%;
   }
 }
 
 @media (min-width: 1280px) {
   .buttonsLayout {
-    width: 50%;
+    width: 60%;
   }
 }

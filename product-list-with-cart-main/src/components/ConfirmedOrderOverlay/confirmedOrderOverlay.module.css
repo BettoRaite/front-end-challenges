@@ -51,7 +51,7 @@
   padding-top: 1rem;
   margin: 0;
 
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   text-transform: capitalize;
   line-height: 2.7rem;
 }
@@ -61,6 +61,7 @@
   margin: 0;
   margin-top: 0.4rem;
   margin-bottom: 1.9rem;
+  font-size: 0.9rem;
 }
 .orderFinalPriceLayout {
   display: flex;
@@ -73,7 +74,7 @@
   text-transform: capitalize;
 }
 .orderFinalPrice {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--rose-900);
   text-transform: capitalize;
@@ -95,7 +96,7 @@
 
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--rose-50);
 
   margin-top: 1.8rem;
@@ -105,6 +106,23 @@
 
 .startNewOrderButton:hover {
   background-color: var(--red-pale);
+}
+
+@media (min-width: 640px) {
+  .mainLayout {
+    width: 50%;
+    margin: auto;
+    top: 10%;
+    bottom: 10%;
+  }
+  .mainLayoutHidden {
+    z-index: -1;
+    opacity: 0;
+    bottom: 100%;
+  }
+  .confirmationHeader {
+    width: 100%;
+  }
 }
 
 @media (min-width: 1024px) {

@@ -45,10 +45,10 @@ export function InCartProductCard({
 
 					<div>
 						<p className={styles.productName} style={hasBeenOrdered ? {
-							fontSize: "0.85rem"
+							fontSize: "0.75rem"
 						} : {}}>{productName}</p>
 						<div className={styles.orderInfoLayout} style={hasBeenOrdered ? {
-							fontSize: "0.9rem"
+							fontSize: "0.7rem"
 						} : {}}>
 							<p className={styles.orderCount}>{product.orderCount}</p>
 							<p className={styles.productPrice}>{toFixed(product.price)}</p>

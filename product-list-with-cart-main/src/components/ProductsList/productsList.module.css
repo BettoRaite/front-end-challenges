@@ -12,6 +12,6 @@
   .cardsLayout {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
+    column-gap: 1.5rem;
   }
 }

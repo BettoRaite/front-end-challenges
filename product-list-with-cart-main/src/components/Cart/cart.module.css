@@ -16,7 +16,7 @@
 
   color: var(--red);
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
@@ -38,7 +38,7 @@
   margin-top: 0.7rem;
 
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 
   color: var(--rose-500);
 }
@@ -58,11 +58,11 @@
   margin: 0;
 }
 .orderFinalPriceLayout > p:first-child {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--rose-900);
 }
 .orderFinalPrice {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--rose-900);
 }
@@ -92,7 +92,7 @@
   margin-top: var(--margin-top-bottom);
   margin-bottom: var(--margin-top-bottom);
 
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .deliveryInfo > img {
   height: 1.3rem;
@@ -127,7 +127,7 @@
 .confirmOrderButton:hover {
   background-color: var(--red-pale);
 }
-@media (width <= 320px) {
+@media (max-width: 345px) {
   .deliveryInfo {
     flex-direction: column;
   }

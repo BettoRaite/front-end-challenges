@@ -13,7 +13,7 @@
   gap: 0.9rem;
 }
 .productName {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--rose-900);
 }
@@ -25,7 +25,7 @@
   display: flex;
   gap: 0.7rem;
 
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .orderCount {
   margin-left: 0.2rem;
@@ -91,7 +91,7 @@
 }
 
 .productThumbnail {
-  --size: 3rem;
+  --size: 2.8rem;
   height: var(--size);
   width: var(--size);
 

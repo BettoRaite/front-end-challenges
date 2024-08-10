@@ -4,7 +4,7 @@
 }
 
 .layout {
-  padding: 1.5rem;
+  padding: 1.6rem;
 }
 
 .overlay {
@@ -17,14 +17,15 @@
   right: 0;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1280px) {
   .mainLayout {
     display: grid;
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: 65% 1fr;
     gap: 2rem;
     background-color: var(--white);
   }
   .layout {
-    padding: 5rem;
+    padding: 6.3rem;
+    padding-top: 5.5rem;
   }
 }

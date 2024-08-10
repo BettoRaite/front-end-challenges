@@ -1,4 +1,4 @@
-import styles from "./card.module.css";
+import styles from "./cart.module.css";
 import { useProducts } from "../ProductsProvider/ProductsProvider.tsx";
 import emptyCartImage from "/images/illustration-empty-cart.svg";
 import {
