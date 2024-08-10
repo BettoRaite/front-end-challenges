@@ -16,16 +16,18 @@ export function MainLayout({
 		setIsShowOverlay(!isShowOverlay);
 	}
 	return (
-		<main className={styles.mainLayout}>
-			<h1 className={styles.header}>Desserts</h1>
-			<ProductsProvider initialProducts={initialProducts}>
-				<ProductsList />
-				<Cart onShowOverlay={handleShowOverlay} />
-				<ConfirmedOrderOverlay
-					isHidden={!isShowOverlay}
-					onHideOverlay={handleShowOverlay}
-				/>
-			</ProductsProvider>
+		<main className={styles.layout}>
+			<div className={styles.mainLayout}>
+				<ProductsProvider initialProducts={initialProducts}>
+					<ProductsList />
+					<Cart onShowOverlay={handleShowOverlay} />
+					<div className={`${isShowOverlay && styles.overlay}`} />
+					<ConfirmedOrderOverlay
+						isHidden={!isShowOverlay}
+						onHideOverlay={handleShowOverlay}
+					/>
+				</ProductsProvider>
+			</div>
 		</main>
 	);
 }

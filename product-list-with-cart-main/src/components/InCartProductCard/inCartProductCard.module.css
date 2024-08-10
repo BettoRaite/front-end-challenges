@@ -1,28 +1,110 @@
-.layout {
+.mainLayout {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
 }
-.orderInfoLayout {
+.mainLayout * {
+  padding: 0;
+  margin: 0;
+}
+.descriptionLayout {
   display: flex;
-  gap: 1rem;
+  gap: 0.9rem;
+}
+.productName {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--rose-900);
+}
+.orderInfoLayout {
+  --margin-top-down: 0.4rem;
+  margin-top: var(--margin-top-down);
+  margin-bottom: 0;
+
+  display: flex;
+  gap: 0.7rem;
+
+  font-size: 1rem;
+}
+.orderCount {
+  margin-left: 0.2rem;
+  font-weight: 500;
+  color: var(--red);
+}
+.orderCount::after {
+  content: "x";
+}
+.productPrice {
+  color: var(--rose-500);
+}
+.productPrice::before {
+  content: "@ $";
+}
+.productTotalPrice {
+  font-weight: 500;
+  color: var(--rose-500);
+}
+.productTotalPrice::before {
+  content: "$";
 }
 .cancelOrderButton {
+  align-self: stretch;
+
+  width: 20%;
+
+  cursor: pointer;
+
   background-color: transparent;
-  --size: 1.3rem;
-  height: var(--size);
-  width: var(--size);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border: none;
+}
+
+.buttonIconWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
-  border: 2px solid var(--rose-300);
-  margin: 0;
-  padding: 0;
-}
-.cancelOrderButton image {
+
   --size: 1rem;
+  --border-width: 2px;
+
   height: var(--size);
   width: var(--size);
+
+  border-radius: 100%;
+  border: var(--border-width) solid var(--rose-300);
+
+  transition: 0.2s all;
+}
+.buttonIconWrapper img {
+  padding: 1px;
+}
+.cancelOrderButton:hover .buttonIconWrapper {
+  border: var(--border-width) solid var(--rose-500);
+}
+.cancelOrderButton:hover .buttonIconWrapper img {
+  filter: brightness(0.5);
+}
+
+.productThumbnail {
+  --size: 3rem;
+  height: var(--size);
+  width: var(--size);
+
+  border-radius: 6px;
+}
+
+.divider {
+  background-color: var(--rose-100);
+  opacity: 0.8;
+
+  height: 1px;
+  width: 100%;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

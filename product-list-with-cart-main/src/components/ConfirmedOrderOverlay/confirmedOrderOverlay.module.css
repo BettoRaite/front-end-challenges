@@ -1,18 +1,125 @@
-.layout {
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow-y: scroll;
+
+  padding: 1.5rem;
+  padding-top: 2.3rem;
+
   position: fixed;
+  z-index: 2;
   left: 0;
   right: 0;
   top: 10%;
   bottom: 0;
-  background-color: var(--rose-50);
+
+  background-color: white;
   transition: all 0.2s;
+  border-radius: 10px;
 }
-.layoutHidden {
+.mainLayoutHidden {
   top: 100%;
+}
+.orderConfirmedIcon {
+  --size: 2.9em;
+  height: var(--size);
+  width: var(--size);
 }
 .button {
   text-transform: capitalize;
 }
+.cardsLayout {
+  overflow-y: scroll;
 
-@media (min-width: 640px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  --padding-sides: 1.3rem;
+  padding: 1rem;
+  padding-left: var(--padding-sides);
+  padding-right: var(--padding-sides);
+
+  background-color: var(--rose-50);
+  border-radius: 10px;
+}
+.confirmationHeader {
+  width: 70%;
+
+  padding-top: 1rem;
+  margin: 0;
+
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  line-height: 2.7rem;
+}
+.blessings {
+  color: var(--rose-500);
+
+  margin: 0;
+  margin-top: 0.4rem;
+  margin-bottom: 1.9rem;
+}
+.orderFinalPriceLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderFinalPriceLayout p:first-child {
+  font-size: 0.85rem;
+  color: var(--rose-900);
+  text-transform: capitalize;
+}
+.orderFinalPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--rose-900);
+  text-transform: capitalize;
+
+  margin: 0;
+}
+.orderFinalPrice::before {
+  content: "$";
+}
+.startNewOrderButton {
+  transition: 0.2s background-color;
+  cursor: pointer;
+  --padding-top-bottom: 0.8rem;
+  width: 100%;
+
+  background-color: var(--red);
+  border: none;
+  border-radius: 30px;
+
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--rose-50);
+
+  margin-top: 1.8rem;
+  padding-top: var(--padding-top-bottom);
+  padding-bottom: var(--padding-top-bottom);
+}
+
+.startNewOrderButton:hover {
+  background-color: var(--red-pale);
+}
+
+@media (min-width: 1024px) {
+  .mainLayout {
+    width: 30%;
+    margin: auto;
+    top: 10%;
+    bottom: 10%;
+  }
+  .mainLayoutHidden {
+    z-index: -1;
+    opacity: 0;
+    bottom: 100%;
+  }
+  .confirmationHeader {
+    width: 100%;
+  }
 }

@@ -1,8 +1,134 @@
-.layout {
-  height: 10rem;
+.mainLayout {
+  height: min-content;
+  background-color: white;
+
+  box-sizing: border-box;
+  padding: 1.4rem;
+  padding-bottom: 2.25rem;
+
+  border-radius: 10px;
+
+  transition: 0.3s height;
 }
+
+.ordersSum {
+  text-transform: capitalize;
+
+  color: var(--red);
+
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 .emptyCartContentLayout {
+  --padding: 1.9rem;
+  margin-top: 0.3rem;
+
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  padding: 4rem;
+
+  padding: var(--padding) var(--padding) 0 var(--padding);
+}
+.emptyCartImage {
+  height: 7.6rem;
+}
+.hint {
+  margin: 0;
+  margin-top: 0.7rem;
+
+  font-weight: 500;
+  font-size: 0.9rem;
+
+  color: var(--rose-500);
+}
+.cardsWrapper {
+  margin-top: 1.5rem;
+}
+.orderFinalPriceLayout {
+  margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-transform: capitalize;
+}
+.orderFinalPriceLayout > * {
+  margin: 0;
+}
+.orderFinalPriceLayout > p:first-child {
+  font-size: 1rem;
+  color: var(--rose-900);
+}
+.orderFinalPrice {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--rose-900);
+}
+.orderFinalPrice::before {
+  content: "$";
+}
+.deliveryInfo {
+  --margin-top-bottom: 1.3rem;
+  --padding: 1rem;
+
+  width: 95%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+
+  background-color: var(--rose-50);
+  border-radius: 10px;
+
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+
+  margin: auto;
+  margin-top: var(--margin-top-bottom);
+  margin-bottom: var(--margin-top-bottom);
+
+  font-size: 1rem;
+}
+.deliveryInfo > img {
+  height: 1.3rem;
+}
+.bold {
+  --margin-sides: 1px;
+
+  color: var(--rose-900);
+  font-weight: 500;
+
+  margin-left: var(--margin-sides);
+  margin-right: var(--margin-sides);
+}
+.confirmOrderButton {
+  transition: 0.2s background-color;
+  cursor: pointer;
+  --padding-top-bottom: 1rem;
+  width: 100%;
+
+  background-color: var(--red);
+  border: none;
+  border-radius: 30px;
+
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--rose-50);
+
+  padding-top: var(--padding-top-bottom);
+  padding-bottom: var(--padding-top-bottom);
+}
+.confirmOrderButton:hover {
+  background-color: var(--red-pale);
+}
+@media (width <= 320px) {
+  .deliveryInfo {
+    flex-direction: column;
+  }
 }

@@ -1,8 +1,6 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
 
+:root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
@@ -11,7 +9,7 @@
   -webkit-font-smoothing: antialiased;
 
   /* Colors */
-
+  --red-pale: hsl(14, 86%, 30%);
   --red: hsl(14, 86%, 42%);
   --green: hsl(159, 69%, 38%);
   --rose-50: hsl(20, 50%, 98%);
@@ -22,9 +20,16 @@
   --rose-900: hsl(14, 65%, 9%);
 }
 
+* {
+  font-family: "Red Hat Text", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+  font-style: normal;
+}
+
 body {
   color: black;
-  background-color: var(--white);
+  background-color: var(--rose-50);
   margin: 0;
   padding: 0;
   display: flex;

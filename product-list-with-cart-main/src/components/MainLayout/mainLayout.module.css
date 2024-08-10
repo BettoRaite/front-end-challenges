@@ -1,9 +1,30 @@
 .mainLayout {
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
-  padding: 1.3rem;
 }
-.header {
-  color: var(--grey-darker);
+
+.layout {
+  padding: 1.5rem;
+}
+
+.overlay {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 1040px) {
+  .mainLayout {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    gap: 2rem;
+    background-color: var(--white);
+  }
+  .layout {
+    padding: 5rem;
+  }
 }

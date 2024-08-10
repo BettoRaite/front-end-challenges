@@ -1,44 +1,169 @@
-.layout {
+.mainLayout {
   width: 100%;
+
   display: grid;
+
+  position: relative;
+
+  margin-bottom: 1.5rem;
+}
+.coverWrapper {
+  display: flex;
+  justify-content: center;
   position: relative;
 }
 .cover {
   width: 100%;
   border-radius: 8px;
 }
-.buttonWrapper {
-  width: 100%;
+.coverSelected {
+  border: 2px solid var(--red);
+}
+
+.buttonsLayout {
+  --padding-sides: 0.5rem;
+  --button-padding-top-down: 1.7rem;
+  --height: calc(var(--button-padding-top-down) + 1rem);
+
   position: absolute;
-  top: 57%;
+  bottom: calc(var(--height) * 0.5 * -1);
+
+  width: 45%;
+  height: var(--height);
+  padding-left: var(--padding-sides);
+  padding-right: var(--padding-sides);
+
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: white;
+  border: 1px solid var(--rose-400);
+  border-radius: 3rem;
+
+  transition: all 0.4s;
 }
-.addToCardButton {
-  padding: 10px;
+:is(.buttonsLayout):not(.buttonsLayoutInCart):hover {
+  border: 1px solid var(--red);
 }
-.orderButtonsLayout {
-  width: 40%;
+.buttonsLayout:hover > .addToCardButton {
+  color: var(--red);
+
+  transition: all 0.3s;
+}
+
+.buttonsLayoutInCart {
   background-color: var(--red);
+  font-weight: 500;
   color: var(--rose-100);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border-radius: 1rem;
-  padding: 0.8rem;
-}
-.orderButtonsLayout > button {
-  --size: 1rem;
-  height: var(--size);
-  width: var(--size);
-  border-radius: 100%;
+  /* justify-content: space-between; */
   border: none;
+}
+
+:is(.addToCardButton, .button) {
+  flex: 1;
+  padding-bottom: var(--button-padding-top-down);
+  padding-top: var(--button-padding-top-down);
+
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--rose-100);
+  gap: 0.5rem;
+
+  cursor: pointer;
+
+  border: none;
   background-color: transparent;
-  border: 2px solid var(--rose-100);
+  font-weight: 500;
+  color: var(--rose-900);
+  text-transform: capitalize;
+}
+
+.addToCardButton {
+  font-size: 1rem;
+}
+
+.buttonDecrement {
+  justify-content: start;
+}
+.buttonIncrement {
+  justify-content: end;
+}
+.button:hover > .buttonIconWrapper {
+  background-color: var(--rose-100);
+}
+.button:hover > .buttonIconWrapper img {
+  filter: brightness(0.3);
+}
+.buttonIconWrapper {
+  --size: 0.9rem;
+  --padding: 2px;
+  --final-size: calc(var(--size) - var(--padding));
+  height: var(--final-size);
+  width: var(--final-size);
+
+  border-radius: 100%;
+  color: var(--rose-100);
+
+  background-color: transparent;
+  border: 1px solid var(--rose-100);
+  padding: var(--padding);
+  display: flex;
+  transition: 0.2s all;
+}
+
+.descriptionLayout {
+  margin-top: 2.1rem;
+}
+.descriptionLayout * {
+  margin: 0;
+  margin-top: 0.1rem;
+}
+.productCategory {
+  font-size: 1rem;
+  color: var(--rose-400);
+}
+.productName {
+  font-size: 1.1rem;
+  color: var(--rose-900);
+  font-weight: 500;
+}
+.productPrice {
+  font-size: 1.1rem;
+  color: var(--red);
+  font-weight: 500;
+}
+.productPrice::before {
+  content: "$";
+}
+
+@media (min-width: 320px) {
+  .buttonsLayout {
+    width: 45%;
+  }
+}
+
+@media (min-width: 640px) {
+  .buttonsLayout {
+    width: 70%;
+  }
+  .coverSelected {
+    border: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .buttonsLayout {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .buttonsLayout {
+    width: 50%;
+  }
 }
