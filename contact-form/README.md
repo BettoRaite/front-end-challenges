@@ -52,8 +52,8 @@ Error state.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/BettoRaite/front-end-challenges/tree/master)
-- Live Site URL: [Add live site URL here](https://contact-form-bettoraite.vercel.app/)
+- Solution URL: [Root repo](https://github.com/BettoRaite/front-end-challenges/tree/master)
+- Live Site URL: [View demo](https://contact-form-bettoraite.vercel.app/)
 
 ## My process
 
