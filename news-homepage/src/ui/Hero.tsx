@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { getRecent } from "../actions/database/articles";
 import { Resizible } from "../components/Resizible";
 import { getMostRecent } from "../actions/database/articles";
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "../ui/Navbar";
+import { Footer } from "../ui/Footer";
 
 const inter = localFont({
   src: "./assets/fonts/InterVF.ttf",
@@ -31,6 +32,7 @@ export default function RootLayout({
         <main className="px-4 xl:px-40 lg:px-32 md:px-16">
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

@@ -1,5 +1,5 @@
 import { getTrending } from "../actions/database/articles";
-import { SelectArticle } from "@/src/app/lib/database/schema";
+import { SelectArticle } from "../lib/database/schema";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,9 +8,14 @@ interface CardProps extends SelectArticle {
 }
 export function Card({ title, lead, place, coverUrl, id }: CardProps) {
   return (
-    <article className="grid grid-cols-3 gap-6 items-center">
-      <div className="col-start-1 bg-red-50 relative h-full">
-        <Image src={coverUrl ?? ""} alt={title} fill={true} />
+    <article className="flex gap-6">
+      <div className="col-start-1 bg-red-50 relative min-w-28 min-h-28 h-full">
+        <Image
+          src={coverUrl ?? ""}
+          alt={title}
+          fill={true}
+          className="object-cover"
+        />
       </div>
       <section className="col-span-2">
         <h1 className="font-inter-extra-bold text-3xl text-soft-red">
