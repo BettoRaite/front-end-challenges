@@ -26,7 +26,7 @@ export function Navbar() {
   const routes = ["home", "new", "popular", "trending", "categories"];
 
   const navLinks = (
-    <ul className="flex flex-col ml-6 md:flex-row">
+    <ul className="flex flex-col ml-6 gap-4 md:flex-row md:gap-0">
       {routes.map((item, index) => (
         <li key={index}>
           <Link
