@@ -30,14 +30,12 @@ const getPath = (widths: Widths, deviceWidth: number) => {
 };
 
 export function Resizible({ widths }: ResizibleProps) {
-  const [deviceWidth, setDeviceWidth] = useState(0);
   const [imagePath, setImagePath] = useState("");
-
   useEffect(() => {
     const handleResize = () => {
-      const width = window.innerWidth;
-      setDeviceWidth(width);
-      setImagePath(getPath(widths, width));
+      const deviceWidth = window.innerWidth;
+      const path = getPath(widths, deviceWidth);
+      if (imagePath !== path) setImagePath(path);
     };
 
     handleResize();
@@ -47,7 +45,7 @@ export function Resizible({ widths }: ResizibleProps) {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [widths]);
+  }, [widths, imagePath]);
 
   return (
     <Image
